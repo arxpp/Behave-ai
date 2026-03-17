@@ -18,6 +18,8 @@ export interface PatientProfile {
   condition: string;
   riskLevel: 'low' | 'medium' | 'high';
   emotionData: PatientEmotionDataPoint[];
+  photoAngry: string;
+  photoCalm: string;
 }
 
 // Sample patient: John Doe - showing a complete behavioral cycle
@@ -28,6 +30,8 @@ export const johnDoeData: PatientProfile = {
   room: '101',
   condition: 'Moderate Dementia',
   riskLevel: 'high',
+  photoAngry: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663443695839/AXPs7eqtPwFeJ4dGi4DHLo/john-doe-angry-NPN9SZjYCddDS4T29ZUJAN.webp',
+  photoCalm: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663443695839/AXPs7eqtPwFeJ4dGi4DHLo/john-doe-calm-8q8AZnpqeDF9gq8C7DujRR.webp',
   emotionData: [
     {
       timestamp: '2024-03-17T08:00:00',
@@ -163,6 +167,8 @@ export const margaretSmithData: PatientProfile = {
   room: '205',
   condition: 'Mild Dementia',
   riskLevel: 'low',
+  photoAngry: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663443695839/AXPs7eqtPwFeJ4dGi4DHLo/margaret-smith-concerned-Mr4ZpdbnDVTZ6Swuotmhed.webp',
+  photoCalm: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663443695839/AXPs7eqtPwFeJ4dGi4DHLo/margaret-smith-calm-G9B3TWwGawBeAfPjKAddn3.webp',
   emotionData: [
     {
       timestamp: '2024-03-17T08:00:00',
@@ -255,6 +261,8 @@ export const robertJohnsonData: PatientProfile = {
   room: '312',
   condition: 'Moderate-Severe Dementia',
   riskLevel: 'high',
+  photoAngry: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663443695839/AXPs7eqtPwFeJ4dGi4DHLo/robert-johnson-agitated-bEePKXUZBTcDgVurcM3f8f.webp',
+  photoCalm: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663443695839/AXPs7eqtPwFeJ4dGi4DHLo/robert-johnson-calm-kd5MW68TbHJndNrMvYjTL6.webp',
   emotionData: [
     {
       timestamp: '2024-03-17T08:00:00',

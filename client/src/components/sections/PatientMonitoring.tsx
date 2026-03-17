@@ -37,6 +37,28 @@ export default function PatientMonitoring() {
           </p>
         </div>
 
+        {/* Patient Photos */}
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="bg-white border border-border rounded-lg p-6">
+            <h3 className="text-lg font-bold text-foreground mb-4">Angry/Upset State</h3>
+            <img
+              src={selectedPatient.photoAngry}
+              alt={selectedPatient.name}
+              className="w-full h-80 object-cover rounded-lg border-2 border-red-200"
+            />
+            <p className="text-sm text-muted-foreground mt-3">High anger levels (70-80%)</p>
+          </div>
+          <div className="bg-white border border-border rounded-lg p-6">
+            <h3 className="text-lg font-bold text-foreground mb-4">Calm/Peaceful State</h3>
+            <img
+              src={selectedPatient.photoCalm}
+              alt={selectedPatient.name}
+              className="w-full h-80 object-cover rounded-lg border-2 border-green-200"
+            />
+            <p className="text-sm text-muted-foreground mt-3">Low anger levels (5-15%)</p>
+          </div>
+        </div>
+
         {/* Patient Selection */}
         <div className="mb-8">
           <label className="block text-sm font-semibold text-foreground mb-3">
