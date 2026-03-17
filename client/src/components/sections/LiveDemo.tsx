@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { Camera, Upload, AlertCircle, Send } from 'lucide-react';
-import { mockEmotionDetection, normalizeEmotions, generateAlert, getAngerSeverity, getSeverityColor, type AlertNotification } from '@/lib/demoUtils';
+import { analyzeImageEmotions, analyzeVideoFrame, generateAlert, getAngerSeverity, getSeverityColor, type AlertNotification } from '@/lib/demoUtils';
 
 export default function LiveDemo() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -35,7 +35,7 @@ export default function LiveDemo() {
   };
 
   // Capture frame and analyze
-  const captureAndAnalyze = () => {
+  const captureAndAnalyze = async () => {
     if (!videoRef.current || !canvasRef.current) return;
 
     setIsProcessing(true);
@@ -44,48 +44,45 @@ export default function LiveDemo() {
       ctx.drawImage(videoRef.current, 0, 0, canvasRef.current.width, canvasRef.current.height);
     }
 
-    // Simulate emotion detection
-    setTimeout(() => {
-      const rawEmotions = mockEmotionDetection();
-      const normalized = normalizeEmotions(rawEmotions);
-      setEmotions(normalized);
+    // Analyze emotion from video frame
+    const emotions = await analyzeVideoFrame(canvasRef.current);
+    setEmotions(emotions);
+    
+    const anger = emotions.anger;
+    setAngerLevel(anger);
+
+    // Generate alert if anger level is high
+    if (anger > 40) {
+      const newAlert = generateAlert(anger, patientName);
+      setAlerts(prev => [newAlert, ...prev].slice(0, 5));
+    }
+
+    setIsProcessing(false);
+  };
+
+  // Handle photo upload
+  const handlePhotoUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = async (event) => {
+      const imageData = event.target?.result as string;
+      setIsProcessing(true);
       
-      const anger = normalized.anger;
+      // Analyze emotions from uploaded image
+      const emotions = await analyzeImageEmotions(imageData);
+      setEmotions(emotions);
+      
+      const anger = emotions.anger;
       setAngerLevel(anger);
 
-      // Generate alert if anger level is high
       if (anger > 40) {
         const newAlert = generateAlert(anger, patientName);
         setAlerts(prev => [newAlert, ...prev].slice(0, 5));
       }
 
       setIsProcessing(false);
-    }, 1000);
-  };
-
-  // Handle photo upload
-  const handlePhotoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
-
-    const reader = new FileReader();
-    reader.onload = () => {
-      setIsProcessing(true);
-      setTimeout(() => {
-        const rawEmotions = mockEmotionDetection();
-        const normalized = normalizeEmotions(rawEmotions);
-        setEmotions(normalized);
-        
-        const anger = normalized.anger;
-        setAngerLevel(anger);
-
-        if (anger > 40) {
-          const newAlert = generateAlert(anger, patientName);
-          setAlerts(prev => [newAlert, ...prev].slice(0, 5));
-        }
-
-        setIsProcessing(false);
-      }, 1000);
     };
     reader.readAsDataURL(file);
   };
@@ -290,7 +287,7 @@ export default function LiveDemo() {
         {/* Info Box */}
         <div className="mt-8 bg-blue-50 border border-blue-200 rounded-lg p-6">
           <p className="text-sm text-blue-900">
-            <strong>ℹ️ Demo Note:</strong> This is a demonstration of how CareMind AI works. In production, the system uses advanced machine learning models trained on diverse facial expressions. The emotion detection shown here is simulated for demonstration purposes. Real implementation would use state-of-the-art emotion recognition APIs with 94%+ accuracy.
+            <strong>ℹ️ How It Works:</strong> This demo analyzes the brightness and color distribution in images to estimate emotional states. Darker images with reddish tones (flushed face, furrowed brows) indicate higher anger levels. Brighter, balanced images indicate calm or happy states. Try uploading photos with different expressions to see how the system responds!
           </p>
         </div>
       </div>
