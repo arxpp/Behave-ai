@@ -4,13 +4,50 @@ import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import Home from "./pages/Home";
+import { useState } from "react";
+import Sidebar from "./components/Sidebar";
+import Overview from "./components/sections/Overview";
+import EpicsSection from "./components/sections/EpicsSection";
+import WorkflowSection from "./components/sections/WorkflowSection";
+import SprintSection from "./components/sections/SprintSection";
+import RolesSection from "./components/sections/RolesSection";
 
+function Dashboard() {
+  const [activeSection, setActiveSection] = useState("overview");
+
+  const renderSection = () => {
+    switch (activeSection) {
+      case "overview":
+        return <Overview />;
+      case "epics":
+        return <EpicsSection />;
+      case "workflow":
+        return <WorkflowSection />;
+      case "sprint":
+        return <SprintSection />;
+      case "roles":
+        return <RolesSection />;
+      default:
+        return <Overview />;
+    }
+  };
+
+  return (
+    <div className="flex h-screen bg-background">
+      <Sidebar activeSection={activeSection} onSectionChange={setActiveSection} />
+      <main className="flex-1 overflow-y-auto pt-16 lg:pt-0">
+        <div className="max-w-6xl mx-auto px-4 py-8 lg:px-8">
+          {renderSection()}
+        </div>
+      </main>
+    </div>
+  );
+}
 
 function Router() {
   return (
     <Switch>
-      <Route path={"/"} component={Home} />
+      <Route path={"/"} component={Dashboard} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
@@ -18,17 +55,11 @@ function Router() {
   );
 }
 
-// NOTE: About Theme
-// - First choose a default theme according to your design style (dark or light bg), than change color palette in index.css
-//   to keep consistent foreground/background color across components
-// - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
-
 function App() {
   return (
     <ErrorBoundary>
       <ThemeProvider
         defaultTheme="light"
-        // switchable
       >
         <TooltipProvider>
           <Toaster />
