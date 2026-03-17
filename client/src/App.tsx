@@ -12,6 +12,7 @@ import Testimonials from "./components/sections/Testimonials";
 import Pricing from "./components/sections/Pricing";
 import FAQ from "./components/sections/FAQ";
 import LiveDemo from "./components/sections/LiveDemo";
+import PatientMonitoring from "./components/sections/PatientMonitoring";
 
 function Home() {
   return (
@@ -27,6 +28,9 @@ function Home() {
         </section>
         <section id="live-demo">
           <LiveDemo />
+        </section>
+        <section id="patient-monitoring">
+          <PatientMonitoring />
         </section>
         <section id="testimonials">
           <Testimonials />
