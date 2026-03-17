@@ -11,6 +11,7 @@ import HowItWorks from "./components/sections/HowItWorks";
 import Testimonials from "./components/sections/Testimonials";
 import Pricing from "./components/sections/Pricing";
 import FAQ from "./components/sections/FAQ";
+import LiveDemo from "./components/sections/LiveDemo";
 
 function Home() {
   return (
@@ -23,6 +24,9 @@ function Home() {
         </section>
         <section id="how-it-works">
           <HowItWorks />
+        </section>
+        <section id="live-demo">
+          <LiveDemo />
         </section>
         <section id="testimonials">
           <Testimonials />
