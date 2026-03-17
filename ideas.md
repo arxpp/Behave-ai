@@ -1,81 +1,92 @@
-# Jira Project Reference Website - Design Brainstorm
+# CareMind AI - Dementia Care Alert System Website Design
 
-## Design Approach Selected: Professional Dashboard with Minimalist Elegance
+## Design Approach: Healthcare-Forward Minimalism with Trust & Compassion
 
 ### Design Philosophy
-This website serves as a **professional project reference tool** for teams managing the "Prediction of outburst in Dementia patients" project. The design prioritizes clarity, accessibility, and quick information retrieval while maintaining a sophisticated, modern aesthetic.
+This website represents a **life-changing healthcare technology** that requires immediate trust and credibility. The design balances **clinical professionalism** with **human compassion**, emphasizing safety, dignity, and care for vulnerable populations.
 
 ### Core Design Principles
 
-1. **Information Hierarchy**: Clear visual distinction between Epics, User Stories, and Tasks using size, color, and spacing. Users should instantly understand the structure.
-2. **Scanability**: Organized layouts with generous whitespace allow users to quickly find what they need without cognitive overload.
-3. **Functional Elegance**: Subtle shadows, soft borders, and carefully chosen typography create a premium feel without being ornate.
-4. **Interactive Feedback**: Smooth transitions and hover states provide immediate visual feedback, making the interface feel responsive and alive.
+1. **Trust Through Clarity**: Every element communicates reliability and transparency. No gimmicks, no unnecessary complexity.
+2. **Empathy-Driven**: The design acknowledges the emotional weight of dementia care while offering hope through technology.
+3. **Accessibility First**: High contrast, readable fonts, clear hierarchy - because users include busy healthcare professionals.
+4. **Purposeful Minimalism**: Clean layouts with generous whitespace reduce cognitive load and emphasize key messages.
+5. **Inclusive Imagery**: Warm, diverse representations of caregivers and patients (or abstract visuals respecting privacy).
 
 ### Color Philosophy
 
 **Primary Palette:**
-- **Deep Blue** (`#1e40af`): Primary accent for buttons, links, and key highlights. Conveys professionalism and trust.
-- **Slate Gray** (`#334155`): Text and secondary elements. High contrast ensures readability.
-- **Soft White** (`#f8fafc`): Clean background that reduces eye strain.
-- **Accent Teal** (`#0d9488`): Secondary accent for status indicators and highlights (e.g., "Done" status).
-- **Warm Amber** (`#d97706`): Warning/in-progress indicators.
+- **Trust Blue** (`#0369a1`): Primary CTA, headers, key information. Conveys professionalism and medical reliability.
+- **Care Green** (`#059669`): Secondary accent for positive outcomes, alerts, success states. Represents health and growth.
+- **Warm Neutral** (`#f5f3ff`): Soft background that feels welcoming, not clinical.
+- **Deep Charcoal** (`#1f2937`): Text and serious content. High readability.
+- **Alert Amber** (`#f59e0b`): For warning states and important alerts (used sparingly).
 
-**Emotional Intent**: The palette evokes professionalism, reliability, and clarity—appropriate for a project management tool.
+**Emotional Intent**: The palette evokes professionalism, hope, and human connection—appropriate for a healthcare solution.
 
 ### Layout Paradigm
 
-**Asymmetric Dashboard Layout:**
-- **Left Sidebar**: Navigation menu with project sections (Epics, User Stories, Workflow, etc.). Sticky and always accessible.
-- **Main Content Area**: Large, flexible space for displaying detailed information. Uses a card-based grid system for visual organization.
-- **Search & Filter Bar**: Prominent search functionality at the top, allowing users to quickly filter by epic, story ID, or keyword.
-- **Responsive Design**: On mobile, the sidebar collapses into a hamburger menu, and content stacks vertically.
+**Asymmetric Hero + Modular Sections:**
+- **Hero Section**: Full-width with compelling headline, subheading, and CTA. Asymmetric layout with visual on right, text on left.
+- **Feature Sections**: Alternating left-right layouts prevent monotony. Each section has clear visual hierarchy.
+- **Sticky Navigation**: Always accessible, minimal but functional.
+- **Responsive Stacking**: On mobile, sections stack vertically with touch-friendly CTAs.
 
 ### Signature Elements
 
-1. **Epic Cards**: Large, visually distinct cards with a colored left border (different color per epic) and a brief description. Clicking expands to show associated user stories.
-2. **Story Cards**: Nested within epic cards, displaying story ID, title, acceptance criteria summary, and story points. Includes a status badge.
-3. **Breadcrumb Navigation**: Shows the current location (e.g., "Epics > Data & Emotion Model Setup > POD-9") to help users understand context.
+1. **Feature Cards with Icons**: Each feature has a unique icon (not generic), brief description, and visual indicator of benefit.
+2. **Process Flow Visualization**: A 4-step visual showing how the system detects → alerts → responds → learns.
+3. **Testimonial Blocks**: Quotes from care facility directors with role/facility name (builds credibility).
+4. **Data/Stat Callouts**: Highlighted statistics showing impact (e.g., "30% reduction in incident response time").
+5. **CTA Buttons**: Two-tier system: primary (blue) for main actions, secondary (outline) for secondary actions.
 
 ### Interaction Philosophy
 
-- **Smooth Expansions**: Clicking an epic smoothly expands to reveal stories; clicking a story reveals tasks and acceptance criteria.
-- **Hover Effects**: Cards lift slightly on hover (subtle shadow increase) and text highlights in the primary blue color.
-- **Search Feedback**: Real-time search results update as the user types, with matching text highlighted.
-- **Status Indicators**: Visual badges (colored pills) for status (To Do, In Progress, Done, Blocked) provide instant status recognition.
+- **Smooth Scrolling**: Page feels fluid and responsive to user intent.
+- **Hover States**: Subtle lift and shadow on interactive elements.
+- **Micro-interactions**: Small animations on CTAs and feature reveals as user scrolls.
+- **Form Interactions**: Clear feedback on input, validation, and submission.
+- **Mobile-First Interactions**: Touch-friendly buttons, readable text, no hover-dependent content.
 
 ### Animation Guidelines
 
-- **Entrance Animations**: Cards fade in and slide up slightly when the page loads (duration: 300ms, easing: ease-out).
-- **Expansion Animations**: When expanding epics or stories, content smoothly slides down (duration: 250ms, easing: ease-in-out).
-- **Hover Transitions**: Smooth color and shadow transitions on hover (duration: 150ms).
-- **Search Results**: Results fade in as they appear (duration: 200ms).
+- **Entrance Animations**: Sections fade in and slide up as user scrolls (duration: 400ms, easing: ease-out).
+- **Icon Animations**: Feature icons have subtle entrance animations (scale + fade, duration: 300ms).
+- **CTA Hover**: Buttons shift color and gain subtle shadow (duration: 200ms).
+- **Scroll Reveals**: Content reveals progressively as user scrolls, creating engagement.
+- **Loading States**: Smooth spinners for form submissions (if applicable).
 
 ### Typography System
 
 **Font Pairing:**
-- **Headings**: "Poppins" (Bold, 700 weight) for epic titles and main headings. Modern and professional.
-- **Subheadings**: "Poppins" (SemiBold, 600 weight) for story titles and section headers.
-- **Body Text**: "Inter" (Regular, 400 weight) for descriptions, acceptance criteria, and general content.
-- **Code/IDs**: "JetBrains Mono" (monospace) for story IDs (e.g., POD-9) and technical details.
+- **Headings**: "Poppins" (Bold, 700 weight) for main titles. Modern, friendly, professional.
+- **Subheadings**: "Poppins" (SemiBold, 600 weight) for section headers.
+- **Body Text**: "Inter" (Regular, 400 weight) for descriptions and content. Highly readable.
+- **Code/Technical**: "JetBrains Mono" (monospace) for any technical details.
 
 **Hierarchy:**
-- **H1**: 2.5rem (40px), Poppins Bold, used for page title.
-- **H2**: 1.875rem (30px), Poppins SemiBold, used for epic titles.
-- **H3**: 1.25rem (20px), Poppins SemiBold, used for story titles.
-- **Body**: 1rem (16px), Inter Regular, for descriptions and content.
-- **Small**: 0.875rem (14px), Inter Regular, for secondary information and labels.
+- **H1**: 3.5rem (56px), Poppins Bold, for hero headline.
+- **H2**: 2.25rem (36px), Poppins SemiBold, for section titles.
+- **H3**: 1.5rem (24px), Poppins SemiBold, for feature titles.
+- **Body**: 1rem (16px), Inter Regular, for descriptions.
+- **Small**: 0.875rem (14px), Inter Regular, for secondary information.
 
 ### Visual Hierarchy Summary
 
-- **Large, bold headings** draw attention to major sections.
-- **Colored left borders** on cards create visual distinction.
-- **Generous padding** around content creates breathing room.
-- **Subtle shadows** add depth without overwhelming.
-- **Status badges** use color to communicate state at a glance.
+- **Large, bold headlines** immediately communicate value proposition.
+- **Ample whitespace** creates breathing room and directs attention.
+- **Color accents** (blue and green) guide users through the journey.
+- **Icons + text** combine visual and textual communication.
+- **CTAs stand out** with bold color and clear positioning.
 
 ---
 
-## Implementation Notes
+## Implementation Strategy
 
-This design balances **professionalism** with **accessibility**, ensuring that team members can quickly understand project structure and find the information they need. The use of color, typography, and spacing creates a cohesive, polished interface that feels intentional and well-crafted.
+This design balances **emotional resonance** with **clinical credibility**, ensuring healthcare professionals and facility administrators feel confident in the solution while patients and families feel cared for. The website should feel like a trusted partner in dementia care, not a tech company selling a product.
+
+**Key Messaging Pillars:**
+1. **Safety**: Real-time detection prevents incidents before they escalate.
+2. **Dignity**: Respects patient privacy while protecting their wellbeing.
+3. **Efficiency**: Reduces caregiver burden and response time.
+4. **Compassion**: Technology that enhances human care, not replaces it.
