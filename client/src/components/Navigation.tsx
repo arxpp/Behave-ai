@@ -1,8 +1,11 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { useAuth } from "@/_core/hooks/useAuth";
+import { getLoginUrl } from "@/const";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const { user, logout } = useAuth();
 
   const navItems = [
     { label: "Features", href: "#features" },
@@ -39,12 +42,30 @@ export default function Navigation() {
 
         {/* CTA Buttons */}
         <div className="hidden md:flex items-center gap-4">
-          <button className="text-primary font-semibold hover:text-blue-700 transition-colors">
-            Sign In
-          </button>
-          <button className="bg-primary text-primary-foreground px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-            Get Started
-          </button>
+          {user ? (
+            <>
+              <a href="/dashboard" className="text-primary font-semibold hover:text-blue-700 transition-colors">
+                Dashboard
+              </a>
+              <button 
+                onClick={logout}
+                className="bg-primary text-primary-foreground px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+              >
+                Logout
+              </button>
+            </>
+          ) : (
+            <>
+              <a href={getLoginUrl()} className="text-primary font-semibold hover:text-blue-700 transition-colors">
+                Sign In
+              </a>
+              <a href={getLoginUrl()}>
+                <button className="bg-primary text-primary-foreground px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                  Get Started
+                </button>
+              </a>
+            </>
+          )}
         </div>
 
         {/* Mobile Menu Button */}
@@ -71,12 +92,33 @@ export default function Navigation() {
               </a>
             ))}
             <div className="border-t border-border pt-3 space-y-2">
-              <button className="w-full text-primary font-semibold hover:bg-gray-50 py-2 rounded-lg transition-colors">
-                Sign In
-              </button>
-              <button className="w-full bg-primary text-primary-foreground py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-                Get Started
-              </button>
+              {user ? (
+                <>
+                  <a href="/dashboard" className="block px-4 py-2 text-primary font-semibold hover:bg-gray-50 rounded-lg transition-colors">
+                    Dashboard
+                  </a>
+                  <button 
+                    onClick={() => {
+                      logout();
+                      setIsOpen(false);
+                    }}
+                    className="w-full bg-primary text-primary-foreground py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                  >
+                    Logout
+                  </button>
+                </>
+              ) : (
+                <>
+                  <a href={getLoginUrl()} className="block px-4 py-2 text-primary font-semibold hover:bg-gray-50 rounded-lg transition-colors">
+                    Sign In
+                  </a>
+                  <a href={getLoginUrl()}>
+                    <button className="w-full bg-primary text-primary-foreground py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                      Get Started
+                    </button>
+                  </a>
+                </>
+              )}
             </div>
           </div>
         </div>

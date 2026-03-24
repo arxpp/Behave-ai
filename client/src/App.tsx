@@ -13,6 +13,7 @@ import Pricing from "./components/sections/Pricing";
 import FAQ from "./components/sections/FAQ";
 import LiveDemo from "./components/sections/LiveDemo";
 import PatientMonitoring from "./components/sections/PatientMonitoring";
+import Dashboard from "./pages/Dashboard";
 
 function Home() {
   return (
@@ -51,6 +52,7 @@ function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
+      <Route path={"/dashboard"} component={Dashboard} />
     </Switch>
   );
 }
