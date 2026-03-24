@@ -19,7 +19,7 @@ export default function Navigation() {
         {/* Logo */}
         <div className="flex items-center gap-2">
           <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center text-white font-bold">
-            CA
+            BA
           </div>
           <span className="font-bold text-foreground hidden sm:inline">Behave AI</span>
         </div>
