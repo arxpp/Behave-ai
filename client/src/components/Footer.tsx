@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           {/* Company */}
           <div>
-            <h3 className="font-bold text-lg mb-4">CareMind AI</h3>
+            <h3 className="font-bold text-lg mb-4">Behave AI</h3>
             <p className="text-gray-400 text-sm">
               Transforming dementia care through AI-powered behavioral prediction and caregiver support.
             </p>
@@ -50,7 +50,7 @@ export default function Footer() {
         {/* Divider */}
         <div className="border-t border-gray-700 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-            <p>&copy; {currentYear} CareMind AI. All rights reserved.</p>
+            <p>&copy; {currentYear} Behave AI. All rights reserved.</p>
             <div className="flex gap-6 mt-4 md:mt-0">
               <a href="#" className="hover:text-white transition-colors">Twitter</a>
               <a href="#" className="hover:text-white transition-colors">LinkedIn</a>

@@ -21,7 +21,7 @@ export default function Navigation() {
           <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center text-white font-bold">
             CA
           </div>
-          <span className="font-bold text-foreground hidden sm:inline">CareMind AI</span>
+          <span className="font-bold text-foreground hidden sm:inline">Behave AI</span>
         </div>
 
         {/* Desktop Navigation */}

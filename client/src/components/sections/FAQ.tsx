@@ -14,7 +14,7 @@ export default function FAQ() {
             Frequently Asked Questions
           </h2>
           <p className="text-xl text-muted-foreground">
-            Everything you need to know about CareMind AI
+            Everything you need to know about Behave AI
           </p>
         </div>
 

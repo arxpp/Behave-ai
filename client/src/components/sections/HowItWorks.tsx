@@ -8,7 +8,7 @@ export default function HowItWorks() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            How CareMind AI Works
+            How Behave AI Works
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             A seamless four-step process that detects behavioral changes and empowers caregivers to respond proactively.

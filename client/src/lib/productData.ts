@@ -84,7 +84,7 @@ export const howItWorks: HowItWorks[] = [
   {
     step: 1,
     title: "Continuous Monitoring",
-    description: "CareMind AI cameras monitor patient areas 24/7, analyzing facial expressions and emotional cues in real-time.",
+    description: "Behave AI cameras monitor patient areas 24/7, analyzing facial expressions and emotional cues in real-time.",
     icon: "📹"
   },
   {
@@ -109,7 +109,7 @@ export const howItWorks: HowItWorks[] = [
 
 export const testimonials: Testimonial[] = [
   {
-    quote: "CareMind AI has transformed how we manage behavioral incidents. Response times dropped by 40%, and our staff feels more confident in their ability to prevent escalations.",
+    quote: "Behave AI has transformed how we manage behavioral incidents. Response times dropped by 40%, and our staff feels more confident in their ability to prevent escalations.",
     author: "Margaret Chen",
     role: "Care Facility Director",
     facility: "Sunrise Memory Care, Sydney"
@@ -182,8 +182,8 @@ export const pricingPlans: PricingPlan[] = [
 
 export const faqItems: FAQItem[] = [
   {
-    question: "How does CareMind AI respect patient privacy?",
-    answer: "CareMind AI is designed with privacy as a core principle. All facial analysis happens locally on secure servers, and facial data is never stored permanently. The system only retains alert events and behavioral patterns in an anonymized format. We comply fully with HIPAA and Australian privacy regulations."
+    question: "How does Behave AI respect patient privacy?",
+    answer: "Behave AI is designed with privacy as a core principle. All facial analysis happens locally on secure servers, and facial data is never stored permanently. The system only retains alert events and behavioral patterns in an anonymized format. We comply fully with HIPAA and Australian privacy regulations."
   },
   {
     question: "What is the accuracy rate of the detection system?",
@@ -195,7 +195,7 @@ export const faqItems: FAQItem[] = [
   },
   {
     question: "Can the system integrate with our existing care management software?",
-    answer: "Yes! CareMind AI integrates with most major care management platforms including Aged Care Quality Standards (ACQS) systems. Our technical team will work with your IT department to ensure seamless integration. Custom integrations are available for enterprise clients."
+    answer: "Yes! Behave AI integrates with most major care management platforms including Aged Care Quality Standards (ACQS) systems. Our technical team will work with your IT department to ensure seamless integration. Custom integrations are available for enterprise clients."
   },
   {
     question: "What happens if the system detects an outburst risk?",
@@ -206,7 +206,7 @@ export const faqItems: FAQItem[] = [
     answer: "Yes, we provide comprehensive training for all staff members. Training covers system operation, understanding alerts, de-escalation techniques, and privacy protocols. Initial training is typically 4-6 hours, with ongoing support available. All training materials are provided in multiple formats."
   },
   {
-    question: "What is the ROI for implementing CareMind AI?",
+    question: "What is the ROI for implementing Behave AI?",
     answer: "Facilities typically see ROI within 6-12 months through reduced incident-related costs, decreased staff turnover, fewer hospitalizations, and improved operational efficiency. Average savings include 30-40% reduction in incident response time and 25-35% reduction in behavioral incident costs."
   },
   {

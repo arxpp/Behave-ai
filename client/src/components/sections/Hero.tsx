@@ -20,7 +20,7 @@ export default function Hero() {
 
             {/* Subheading */}
             <p className="text-xl text-muted-foreground leading-relaxed">
-              CareMind AI uses advanced facial recognition to detect early signs of anger and distress in dementia patients, enabling caregivers to respond proactively and prevent behavioral incidents before they escalate.
+              Behave AI uses advanced facial recognition to detect early signs of anger and distress in dementia patients, enabling caregivers to respond proactively and prevent behavioral incidents before they escalate.
             </p>
 
             {/* Key Benefits */}

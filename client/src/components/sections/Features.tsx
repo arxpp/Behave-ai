@@ -10,7 +10,7 @@ export default function Features() {
             Powerful Features for Modern Care
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            CareMind AI combines cutting-edge technology with deep understanding of aged care to deliver features that genuinely improve patient safety and caregiver efficiency.
+            Behave AI combines cutting-edge technology with deep understanding of aged care to deliver features that genuinely improve patient safety and caregiver efficiency.
           </p>
         </div>
 

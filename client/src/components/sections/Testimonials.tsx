@@ -26,7 +26,7 @@ export default function Testimonials() {
             Trusted by Care Leaders
           </h2>
           <p className="text-xl text-muted-foreground text-center max-w-2xl mx-auto mb-16">
-            Hear from facility directors and medical professionals who have transformed their care delivery with CareMind AI.
+            Hear from facility directors and medical professionals who have transformed their care delivery with Behave AI.
           </p>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -61,7 +61,7 @@ export default function Testimonials() {
         {/* CTA */}
         <div className="mt-16 text-center">
           <p className="text-muted-foreground mb-4">
-            Join hundreds of facilities improving patient care with CareMind AI
+            Join hundreds of facilities improving patient care with Behave AI
           </p>
           <button className="bg-primary text-primary-foreground px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl">
             Start Your Free Trial Today

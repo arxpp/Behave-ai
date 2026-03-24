@@ -96,10 +96,10 @@ export default function LiveDemo() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Try CareMind AI Live
+            Try Behave AI Live
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Experience real-time facial recognition and emotion detection. Use your camera or upload a photo to see how CareMind AI detects anger levels and alerts caregivers.
+            Experience real-time facial recognition and emotion detection. Use your camera or upload a photo to see how Behave AI detects anger levels and alerts caregivers.
           </p>
         </div>
 
